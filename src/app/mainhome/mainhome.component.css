@@ -1,0 +1,71 @@
+.footer {
+  background-color: #191A1C;
+  color: white;
+  width: 100%;
+  min-height: 100px;
+  text-align: center;
+}
+.footer-spacing {
+  height: 5px;
+  border: 0;
+  box-shadow: 0px 20px 60px 0px #8a6829;
+  background-color: darkcyan;
+  width: 100%;
+  background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+  -webkit-animation: hue 60s infinite linear;
+}
+.footer-links {
+  position: relative;
+  top: 25px;
+  font-size: 15px;
+  max-width: 75%;
+}
+.row {
+  display:-ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.offset-footer {
+  margin-left: 33.333333%;
+}
+.footer-text {
+  position: relative;
+  top: 30px;
+  font-size: 15px;
+}
+footer a {
+  color: white;
+}
+@keyframes hue {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+  }
+}
+.nav-font-size{
+  font-size: 20px;
+}
+.navdiv{
+  margin-left: 20px;
+}
+.BG{
+  background-image: url(src/assets/image/ZenboBG.png);
+  width: 100%;
+  background-color: #0094F2;
+  height: 50%;
+  min-height: 550px;
+  background-position:  right;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-repeat: no-repeat;
+  color: #F0F0F0
+}
+.navbar {
+  background-color: rgb(59, 119, 134);
+  z-index:10;
+}

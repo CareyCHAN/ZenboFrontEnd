@@ -1,0 +1,16 @@
+
+table {
+  width: 100%;
+}
+.example-button-toggle-label {
+  display: inline-block;
+  margin: 16px;
+}
+.container {
+  height: 270px;
+  overflow: auto;
+}
+.chart {
+  width: 1315px;
+  height: 400px;
+}

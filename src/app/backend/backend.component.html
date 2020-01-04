@@ -1,0 +1,72 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+  integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+  integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-light text_style">
+  <a class="navbar-brand" style="color:aliceblue;"> Zenbo管理頁面 </a>
+  <button class="navbar-toggler" type="button" aria-controls="navbarContent" [attr.aria-expanded]="!collapsed"
+    aria-label="Toggle navigation" (click)="collapsed = !collapsed">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="navbar-collapse" [class.collapse]="!collapsed" id="navbarContent">
+    <ul class="navbar-nav mr-auto">
+
+    </ul>
+
+    <div style="margin-right:10px;color:#969696;border:2px #ccc solid;padding:10px;width: 309.9px;" id="showbox">現在時間:
+      {{ todayYear }} 年 {{ todayMonth }} 月 {{ todayDate }} 日 {{ showTime }} </div>
+    <button type="button" class="btn btn-primary" (click)="logout()">Logout</button>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+          <!-- <li class="nav-item">
+            <a class="nav-link active" [routerLink]="['/home']" routerLinkActive="router-link-active" (click)="logout()">
+              <span data-feather="home"></span>
+              Logout <span class="sr-only">(current)</span>
+            </a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/backend/activity']" routerLinkActive="router-link-active">
+              <span data-feather="file"></span>
+              Activity
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/backend/position']" routerLinkActive="router-link-active">
+              <span data-feather="shopping-cart"></span>
+              Position
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/backend/administrator']" routerLinkActive="router-link-active">
+              <span data-feather="users"></span>
+              Administrator
+            </a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="bar-chart-2"></span>
+              Reports
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="layers"></span>
+              Integrations
+            </a>
+          </li> -->
+        </ul>
+      </div>
+    </nav>
+    <div style="width: 83.33%;">
+      <router-outlet></router-outlet>
+    </div>
+  </div>

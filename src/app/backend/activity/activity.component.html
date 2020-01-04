@@ -1,0 +1,44 @@
+<script src="../build/echarts-plain.js"></script>
+<mat-tab-group color="accent" backgroundColor="primary">
+
+  <mat-tab label="Data">
+    <div class="mat-elevation-z8" style="width: 100%;">
+      <table mat-table [dataSource]="activitydataSource">
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> No. </th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="service">
+          <th mat-header-cell *matHeaderCellDef> Activity </th>
+          <td mat-cell *matCellDef="let element"> {{element.service}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="time">
+          <th mat-header-cell *matHeaderCellDef> Timestamp </th>
+          <td mat-cell *matCellDef="let element"> {{element.time | date: 'yyyy-MM-dd HH:mm:ss'}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="ActivityColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: ActivityColumns;"></tr>
+      </table>
+
+      <mat-paginator [pageSizeOptions]="[10, 15, 30]" showFirstLastButtons></mat-paginator>
+    </div>
+  </mat-tab>
+</mat-tab-group>
+<div id="main" class="chart"></div>
+
+<div style="float: right;">
+  <button mat-icon-button  color="black" (click)="changeWeekListPrevious()" style="margin-right: 10px;">
+    <mat-icon>chevron_left</mat-icon>
+  </button>
+
+  <button mat-icon-button  color="black" (click)="changeWeekListNext()">
+    <mat-icon>chevron_right</mat-icon>
+  </button>
+</div>

@@ -1,0 +1,82 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+  integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+  integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+  integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+
+<nav class="navbar navbar-expand-lg navbar-light text_style fixed-top"
+  style="background-color:rgba(245, 245, 245, 0.8)">
+  <a class="navbar-brand" [routerLink]="['']" routerLinkActive="router-link-active"
+    style=" font-size: 25px;width: 166.7px; height: 74px;"><img id="navbar-image" src="../assets/icon/zenboicon.png"
+      alt="Zenbo" style="width: 41.3px;height: 64px;">ZENBO</a>
+  <button class="navbar-toggler" type="button" aria-controls="navbarContent" [attr.aria-expanded]="!collapsed"
+  aria-label="Toggle navigation" (click)="collapsed = !collapsed">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="navbar-collapse" [class.collapse]="!collapsed" id="navbarContent">
+    <ul class="nav navbar-nav mr-auto nav-font-size">
+      <li class="nav-item active navdiv">
+        <a class="nav-link" [routerLink]="['']" routerLinkActive="router-link-active">首頁<span
+            class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active navdiv">
+        <a class="nav-link" [routerLink]="['/zenboassistant']" routerLinkActive="router-link-active">Zenbo小幫手<span
+            class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active navdiv">
+        <a class="nav-link" [routerLink]="['/servicehours']" routerLinkActive="router-link-active">服務時間<span
+            class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active navdiv">
+        <a class="nav-link" [routerLink]="['/history']" routerLinkActive="router-link-active">歷史簡介<span
+            class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active navdiv">
+        <a class="nav-link" [routerLink]="['/about']" routerLinkActive="router-link-active">關於Zenbo<span
+            class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <form>
+      <button class="btn btn-info" mat-raised-button color="primary" (click)="openDialog()"
+      style="width: 80px; height: 50px; margin-left: 20px;">Login</button>
+    </form>
+  </div>
+</nav>
+
+
+<div class="BG text_style contaniert" style="width: 100%">
+  <div style="padding: 300px 200px">
+    <h1><b>Zenbo Library Service</b></h1>
+    <div style="padding: 50px 150px">
+      <h3><b>Let's explore Library with Zenbo!</b></h3>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
+
+<footer class="footer">
+  <div class="footer-spacing"></div>
+  <div class="footer-links">
+    <div class="row">
+      <span class="col-sm offset-footer"><a [routerLink]="['']" routerLinkActive="router-link-active"
+          (click)="openDialog()">Your
+          Account</a></span>
+      <span class="col-sm custom-link"><a [routerLink]="['']" routerLinkActive="router-link-active"
+          (click)="HavingIssues()">Having
+          Issues?</a></span>
+      <span class="col-sm custom-link"><a [routerLink]="['/about']" routerLinkActive="router-link-active">About
+          Zenbo</a></span>
+      <!--<span class="col-sm custom-link"><div id="timestamp"></div></span>-->
+    </div>
+  </div>
+  <span class="footer-text">© 2019 Website by Carey - ZenboService. All Rights Reserved</span>
+  <div id="timestamp" style="padding-top: 30px;"></div>
+  <!-- <button class="btn btn-info" mat-raised-button color="primary" (click)="openDialog()" style="width: 80px; height: 50px;">Login</button> -->
+</footer>

@@ -1,0 +1,92 @@
+<!-- <script>
+    function EnterPress(e) { //傳入 event
+      var e = e || window.event;
+      if (e.keyCode == 13) {
+        document.getElementByIdx_x_x("Password").focus();
+      }
+    }
+  </script> -->
+  <!-- <script type="text/javascript">
+    function noNumbers(e)
+    {
+    var keynum
+    var keychar
+    var numcheck
+
+    if(window.event) // IE
+      {
+      keynum = e.keyCode
+      }
+    else if(e.which) // Netscape/Firefox/Opera
+      {
+      keynum = e.which
+      }
+    keychar = String.fromCharCode(keynum)
+    numcheck = /\d/
+    return !numcheck.test(keychar)
+    }
+    </script> -->
+<h2 mat-dialog-title>
+  管理者登入
+</h2>
+<form [formGroup]="group" novalidate>
+  <mat-dialog-content class="post-form">
+    <mat-form-field>
+      <input id="account" matInput placeholder="帳號" formControlName="account" (keypress)="
+      myFunc1($event)"/>
+      <mat-error *ngIf="form.account.errors?.required">請輸入帳號</mat-error>
+      <mat-error *ngIf="form.account.errors?.minlength">長度需至少為4</mat-error>
+    </mat-form-field>
+  </mat-dialog-content>
+
+  <mat-dialog-content class="post-form">
+    <mat-form-field>
+      <input id="pass" type="password" autocomplete="off"  matInput placeholder="密碼" formControlName="password" (keypress)="
+      myFunc2($event)"/>
+      <mat-error *ngIf="form.password.errors?.required">請輸入密碼</mat-error>
+      <mat-error *ngIf="form.password.errors?.minlength">長度需至少為6</mat-error>
+    </mat-form-field>
+  </mat-dialog-content>
+
+  <!-- <mat-dialog-content class="post-form">
+<mat-form-field>
+  <input maxlength="6" matInput placeholder="驗證碼" formControlName="identifying" />
+  <mat-error *ngIf="form.identifying.errors?.required">請輸入驗證碼</mat-error>
+</mat-form-field>
+</mat-dialog-content> -->
+
+  <!-- <div style="margin: 1rem 0;">
+  form model value: <br />{{group.value|json}}
+</div> -->
+
+    <button id="1" mat-button mat-dialog-close color="primary" (click)="validation()">提交</button>
+    <button mat-button mat-dialog-close color="warn" cdkFocusInitial>取消</button>
+
+</form>
+
+
+<!-- <div class="js5-form" id="js5-form" ng-controller="enterCtrl">
+  <div id="enter-all" >
+  <h3>jnshu後臺登入</h3>
+  <form action="" name="myForm">
+  <div class="js5-input-div">
+  <div class="js5-input-img1"></div>
+  <input id="js5-userNum" type="text" name="userName" placeholder="使用者名稱" maxlength="12" ng-model="userName" ng-keyup="mykey($event)" required/>
+  </div>
+  </form>
+  <form action="" name="registerForm">
+  <div class="js5-input-div">
+  <div class="js5-input-img2"></div>
+  <input id="js5-password" type="password" name="userPsd" placeholder="密碼" maxlength="20" ng-model="userPsd" ng-keyup="mykey($event)" ng-minlength="5" ng-maxlength="16" required/>
+  </div>
+  </form> -->
+<!--賬號和密碼的登入框-->
+<!-- <form action="" >
+  <div class="js5-input-div">
+  <span class="js5-input-divSpan">驗證碼：</span>
+  <input type="text" placeholder="不區分大小寫" class="js5-form3-input" id="js5-form3-input" ng-model="writeCode" maxlength="6" ng-keyup="mykey($event)">
+  <input type="text" class="js5-authCode" value="" id="js5-authCode" ng-model="showAuthCode" disabled="disabled"> -->
+<!--disabled="disabled"禁止驗證碼框文字被選中-->
+<!-- <span class="spanShift" ng-click="changeVerify()">獲取</span>
+  </div>
+  </form> -->

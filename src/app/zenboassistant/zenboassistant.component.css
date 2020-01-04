@@ -1,0 +1,15 @@
+.body{
+  margin:0px;
+  padding:0px;
+  background:#fff url(https://www.google.com/search?q=zenbo&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiopovygvTlAhWjHqYKHZx6D2kQ_AUIEigB&biw=1920&bih=937#imgrc=hGHF-4JhcIayfM) center center fixed no-repeat;
+  background-size: cover　
+}
+
+.PIC_2{
+  width:600px;
+  height:100px;
+  background-image:url(https://www.google.com/search?q=zenbo&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiopovygvTlAhWjHqYKHZx6D2kQ_AUIEigB&biw=1920&bih=937#imgrc=hGHF-4JhcIayfM);
+  background-repeat:no-repeat;
+  border:1px #ccc solid;
+  background-size:600px 100px;
+}

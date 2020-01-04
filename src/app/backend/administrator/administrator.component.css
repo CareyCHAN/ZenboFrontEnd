@@ -1,0 +1,11 @@
+table {
+  width: 100%;
+}
+.example-button-toggle-label {
+  display: inline-block;
+  margin: 16px;
+}
+.container {
+  height: 270px;
+  overflow: auto;
+}
